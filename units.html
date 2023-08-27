@@ -8,45 +8,57 @@
 </head>
 
 <body>
-
-    <label for="meter">meter:</label>
-    <input type="text" id="meter" onkeyup="calculate()">&nbsp;&nbsp;
-    <label for="cm">centemeter:</label>
-    <input type="text" id="cm"><br><br>
-
     <label for="kilo">Kilometer:</label>
     <input type="text" id="kilo" onkeyup="calculate1()">&nbsp;&nbsp;
     <label for="mtr">Meter:</label>
     <input type="text" id="mtr"><br><br>
 
+    <label for="meter">Meter:</label>
+    <input type="text" id="meter" onkeyup="calculate2()">&nbsp;&nbsp;
+    <label for="cm">Centemeter:</label>
+    <input type="text" id="cm"><br><br>
+
+    <label for="kilo">Centemeter:</label>
+    <input type="text" id="centi" onkeyup="calculate3()">&nbsp;&nbsp;
+    <label for="mtr">Millimeter:</label>
+    <input type="text" id="mm"><br><br>
+
+    <label for="min">Hours:</label>
+    <input type="text" id="hr" onkeyup="calculate4()">&nbsp;&nbsp;
+    <label for="sec">Minute:</label>
+    <input type="text" id="min"><br><br>
+
+    <label for="minute">Minute:</label>
+    <input type="text" id="minute" onkeyup="calculate5()">&nbsp;&nbsp;
+    <label for="sec">Second:</label>
+    <input type="text" id="sec"><br><br>
+
+    <label for="feet">Feet:</label>
+    <input type="text" id="feet" onkeyup="calculate6()">&nbsp;&nbsp;
+    <label for="sec">inch:</label>
+    <input type="text" id="inch"><br><br>
+
     <label for="min">Minute:</label>
-    <input type="text" id="min" onkeyup="calculate2()">&nbsp;&nbsp;
+    <input type="text" id="min" onkeyup="calculate7()">&nbsp;&nbsp;
     <label for="sec">Second:</label>
     <input type="text" id="sec"><br><br>
 
     <label for="">:</label>
-    <input type="text" id="min" onkeyup="calculate3()">&nbsp;&nbsp;
+    <input type="text" id="min" onkeyup="calculate8()">&nbsp;&nbsp;
     <label for="sec">Second:</label>
     <input type="text" id="sec"><br><br>
 
-    <label for="min">Minute:</label>
-    <input type="text" id="min" onkeyup="calculate4()">&nbsp;&nbsp;
-    <label for="sec">Second:</label>
+    <label for="yr">Year:</label>
+    <input type="text" id="yr" onkeyup="calculate9()">&nbsp;&nbsp;
+    <label for="month">Month:</label>
+    <input type="text" id="month"><br><br>
+
+    <label for="min">Month:</label>
+    <input type="text" id="min" onkeyup="calculate10()">&nbsp;&nbsp;
+    <label for="sec">week:</label>
     <input type="text" id="sec"><br><br>
-
-
 
     <script>
-        function calculate() {
-            const meter = parseInt((document.getElementById("meter")).value);
-
-
-            const cm = document.getElementById("cm");
-
-            const calculate = meter * 100;
-
-            cm.value = `${calculate}`;
-        }
 
         function calculate1() {
             const kilo = parseInt((document.getElementById("kilo")).value);
@@ -56,22 +68,101 @@
             const calculate1 = kilo * 1000;
 
             mtr.value = `${calculate1}`;
-
-
         }
 
         function calculate2() {
+            const meter = parseInt((document.getElementById("meter")).value);
+
+            const cm = document.getElementById("cm");
+
+            const calculate2 = meter * 100;
+
+            cm.value = `${calculate2}`;
+        }
+
+
+        function calculate3() {
+            const centi = parseInt((document.getElementById("centi")).value);
+
+            const mm = document.getElementById("mm");
+
+            const calculate3 = centi * 10;
+
+            mm.value = `${calculate3}`;
+        }
+
+
+        function calculate4() {
+            const hr = parseInt((document.getElementById("hr")).value);
+
+            const min = document.getElementById("min");
+
+            const calculate4 = hr * 60;
+
+            min.value = `${calculate4}`;
+        }
+
+        function calculate5() {
+            const minute = parseInt((document.getElementById("minute")).value);
+
+            const sec = document.getElementById("sec");
+
+            const calculate5 = minute * 60;
+
+            sec.value = `${calculate5}`;
+        }
+
+        function calculate6() {
+            const feet = parseInt((document.getElementById("feet")).value);
+
+            const inch = document.getElementById("inch");
+
+            const calculate6 = feet * 12;
+
+            inch.value = `${calculate6}`;
+        }
+
+
+        function calculate7() {
             const min = parseInt((document.getElementById("min")).value);
 
             const sec = document.getElementById("sec");
 
-            const calculate2 = min * 60;
+            const calculate6 = min * 60;
 
-            sec.value = `${calculate2}`;
-
-
+            sec.value = `${calculate6}`;
         }
 
+        function calculate8() {
+            const kilo = parseInt((document.getElementById("minute")).value);
+
+            const minute = document.getElementById("sec");
+
+            const calculate4 = minute * 60;
+
+            minute.value = `${calculate4}`;
+        }
+
+        function calculate9() {
+            const min = parseInt((document.getElementById("feet")).value);
+
+            const sec = document.getElementById("inch");
+
+            const calculate6 = feet * 12;
+
+            sec.value = `${calculate5}`;
+        }
+
+
+        function calculate10() {
+            const min = parseInt((document.getElementById("min")).value);
+
+            const sec = document.getElementById("sec");
+
+            const calculate6 = min * 60;
+
+            sec.value = `${calculate6}`;
+        }
 
 
     </script>
